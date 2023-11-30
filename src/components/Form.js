@@ -169,7 +169,7 @@ const Form = () => {
                 }, 3000)
 
             });
-            notifyFetch()
+
 
         } catch (error) {
             console.error("Error fetching data:", error);
@@ -182,6 +182,7 @@ const Form = () => {
     //first time user will be load from api
     useEffect(() => {
         getData();
+        notifyFetch()
     }, [])
 
     return (
