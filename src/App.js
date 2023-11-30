@@ -1,5 +1,6 @@
 
 import './App.css';
+import Data from './components/Data';
 import Form from './components/Form';
 
 function App() {
