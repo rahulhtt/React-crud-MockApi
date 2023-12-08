@@ -6,77 +6,10 @@ const Data = ({ user, onEdit, onDelete }) => {
 
     const [Loading, setLoading] = useState(true)
 
-
     setTimeout(() => {
         setLoading(false)
     }, 2000)
 
-    // const notify = () => {
-
-    //     toast.success("Data Fetch Successfully", {
-    //         position: toast.POSITION.TOP_RIGHT,
-    //         autoClose: 3000,
-
-    //     });
-    // }
-
-    // const notifyDelete = () => {
-
-    //     toast.success("Delete Successfully", {
-    //         position: toast.POSITION.TOP_RIGHT,
-    //         autoClose: 3000,
-
-    //     });
-    // }
-
-    // const notifyError = () => {
-
-    //     toast.error("Failed to fetch data. Please check your network connection and try again.'", {
-    //         position: toast.POSITION.TOP_RIGHT,
-    //         autoClose: 3000,
-
-    //     });
-    // }
-
-
-    // async function getData() {
-    //     setFetch(true)
-    //     try {
-    //         setLoading(true)
-    //         const res = await axios.get("https://6565b4d7eb8bb4b70ef22d4a.mockapi.io/users").then((res) => {
-    //             setTimeout(() => {
-    //                 setData(res.data)
-    //                 setFetch(false)
-    //             }, 2000)
-
-    //         });
-    //         notify()
-
-    //     } catch (error) {
-    //         console.error("Error fetching data:", error);
-    //         notifyError()
-    //     } finally {
-    //         setLoading(false);
-    //     }
-    // }
-
-    //get user data from api
-    // useEffect(() => {
-    //     getData();
-    // }, [])
-
-
-
-    //delete functionality
-    // const handleDelete = (id) => {
-    //     axios.delete(`https://6565b4d7eb8bb4b70ef22d4a.mockapi.io/users/${id}`)
-    //         .then(
-    //             setTimeout(() => {
-
-    //             }, 2000),
-
-    //         )
-    // }
 
     return (
         <div >
