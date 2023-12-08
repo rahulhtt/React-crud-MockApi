@@ -47,7 +47,7 @@ const Update = () => {
         const newItem = { fname, mname, lname, email, address, contact }
         setLoading(true)
         try {
-            axios.put(`https://6565b4d7eb8bb4b70ef22d4a.mockapi.io/users/${id}`, newItem).then(
+            axios.put(`https://65729b58d61ba6fcc0154172.mockapi.io/users/${id}`, newItem).then(
                 setTimeout(() => {
                     navigate("/")
                 }, 3000),

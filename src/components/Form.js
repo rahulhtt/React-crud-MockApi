@@ -109,7 +109,7 @@ const Form = () => {
             try {
                 const newItem1 = { fname, mname, lname, email, address, contact }
                 setLoading(true)
-                await axios.post("https://6565b4d7eb8bb4b70ef22d4a.mockapi.io/users", newItem1)
+                await axios.post("https://65729b58d61ba6fcc0154172.mockapi.io/users", newItem1)
                 notify()
                 getData()
             } catch (error) {
@@ -148,7 +148,7 @@ const Form = () => {
     const handleDelete = async (userId) => {
         try {
             setLoading(true);
-            await axios.delete(`https://6565b4d7eb8bb4b70ef22d4a.mockapi.io/users/${userId}`);
+            await axios.delete(`https://65729b58d61ba6fcc0154172.mockapi.io/users/${userId}`);
             notifyDelete();
             // Refresh the data after deleting the user
             getData();
@@ -163,7 +163,7 @@ const Form = () => {
     async function getData() {
         try {
             setLoading(true)
-            await axios.get("https://6565b4d7eb8bb4b70ef22d4a.mockapi.io/users").then((res) => {
+            await axios.get("https://65729b58d61ba6fcc0154172.mockapi.io/users").then((res) => {
                 setTimeout(() => {
                     setData(res.data)
                 }, 3000)
