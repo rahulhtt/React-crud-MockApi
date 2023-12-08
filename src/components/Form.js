@@ -85,7 +85,7 @@ const Form = () => {
                 setLoading(true);
                 console.log(id)
                 console.log("edit Item " + newItem2)
-                await axios.put(`https://6565b4d7eb8bb4b70ef22d4a.mockapi.io/users/${id}`, newItem2)
+                await axios.put(`https://65729b58d61ba6fcc0154172.mockapi.io/users/${id}`, newItem2)
                 notifyUpdate()
                 getData()
 

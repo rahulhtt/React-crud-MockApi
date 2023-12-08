@@ -10,7 +10,6 @@ const Data = ({ user, onEdit, onDelete }) => {
         setLoading(false)
     }, 2000)
 
-
     return (
         <div >
             <h1 className='text-center mt-2 text-xl text-white font-bold'>User Details</h1>
