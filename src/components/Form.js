@@ -3,6 +3,7 @@ import axios from 'axios'
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Data from './Data';
+
 const Form = () => {
 
     const [errorMessage, setErrorMessage] = useState('');
@@ -16,6 +17,7 @@ const Form = () => {
     const [Loading, setLoading] = useState(false)
     const [btnText, setBtnText] = useState('Add')
 
+    console.log(process.env)
     const [id, setId] = useState(0)
 
     const [editingUser, setEditingUser] = useState(null);
@@ -85,7 +87,7 @@ const Form = () => {
                 setLoading(true);
                 console.log(id)
                 console.log("edit Item " + newItem2)
-                await axios.put(`https://65729b58d61ba6fcc0154172.mockapi.io/users/${id}`, newItem2)
+                await axios.put(`${process.env.REACT_APP_BASE_URL}/${id}`, newItem2)
                 notifyUpdate()
                 getData()
 
@@ -109,7 +111,7 @@ const Form = () => {
             try {
                 const newItem1 = { fname, mname, lname, email, address, contact }
                 setLoading(true)
-                await axios.post("https://65729b58d61ba6fcc0154172.mockapi.io/users", newItem1)
+                await axios.post(process.env.REACT_APP_BASE_URL, newItem1)
                 notify()
                 getData()
             } catch (error) {
@@ -117,7 +119,6 @@ const Form = () => {
             } finally {
                 setLoading(false)
             }
-
             setFname('')
             setMname('')
             setLname('')
@@ -148,7 +149,7 @@ const Form = () => {
     const handleDelete = async (userId) => {
         try {
             setLoading(true);
-            await axios.delete(`https://65729b58d61ba6fcc0154172.mockapi.io/users/${userId}`);
+            await axios.delete(`${process.env.REACT_APP_BASE_URL}/${userId}`);
             notifyDelete();
             // Refresh the data after deleting the user
             getData();
@@ -163,7 +164,7 @@ const Form = () => {
     async function getData() {
         try {
             setLoading(true)
-            await axios.get("https://65729b58d61ba6fcc0154172.mockapi.io/users").then((res) => {
+            await axios.get(process.env.REACT_APP_BASE_URL).then((res) => {
                 setTimeout(() => {
                     setData(res.data)
                 }, 3000)
