@@ -17,7 +17,7 @@ const Form = () => {
     const [Loading, setLoading] = useState(false)
     const [btnText, setBtnText] = useState('Add')
 
-    console.log(process.env)
+
     const [id, setId] = useState(0)
 
     const [editingUser, setEditingUser] = useState(null);
